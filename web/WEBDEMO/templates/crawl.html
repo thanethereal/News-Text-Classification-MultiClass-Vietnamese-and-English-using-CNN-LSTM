@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TrangChủ!</title>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+</head>
+<style>
+body{
+	font-size:14px;
+}
+	.navbar
+	{
+		border-radius:0px;
+		margin-bottom:0px;
+		background-color:white;
+		border:solid 2px #351111;
+	}
+	.navbar-brand
+	{
+		margin:0px;
+		padding:0px;
+	}
+	ul li
+	{
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+	ul li a
+	{
+		color:black !important;
+	}
+	ul li.active a
+	{
+		color:white !important;
+		background-color:#5E6FB3 !important;
+	}
+	.navbar-text
+	{
+		font-weight:bold;
+		color:black !important;
+	}
+	{
+	footer
+		background:#8FC2DF !important;
+	}
+	h2
+	{
+		font-weight:bold;
+		color:#191212;
+	}
+	p
+	{
+		color:#140F17;
+	}
+</style>
+  </head>  
+  <body>
+
+</nav>
+<div class="container bg-3 text-center">    
+  <h3 style="color:white;font-weight:bold;">BÁO CÁO</h3><hr><br>
+<div class="container bg-3 text-center">    
+ <div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <h2 style="color: white">XỬ LÝ NGÔN NGỮ TỰ NHIÊN</h3>
+  </div>
+</nav>
+    
+</div><br>
+<div class="container bg-3 text-center">    
+<div class="row">
+    <div class="col-sm-4 col-lg-3">
+		<div class="thumbnail">
+			<a href="#"><img style="height:80px; width: 80px" src="https://hoitinhoc.binhdinh.gov.vn/wp-content/uploads/2019/04/image001-300x300.png"></a>
+			<div class="caption">
+				<p style="font_size:16px;">GIÁO VIÊN HƯỚNG DẪN</p>
+				<p style="font_size:16px;">Lê Quang Hùng</p>
+				<p style="font_size:16px;">SINH VIÊN THỰC HIỆN</p>
+				<p style="font_size:16px;">Võ Minh Thẩn</p>
+
+			</div>
+		</div>
+		<div class="thumbnail">
+		<h5>CHỌN MODEL ĐỂ PHÂN LOẠI</h5>
+		<select method="GET" action="/index">
+    <option value= "" SELECTED>Linear VietNamese Model</option>"
+	 <option value= "" SELECTED>Naive Bayes VietNamese Model</option>"
+	 <option value= "" SELECTED>CNN-LSTM VietNamese Model</option>"
+	 <option value= "" SELECTED>CNN-LSTM English Model</option>"
+</select>
+</div>
+<div class="thumbnail">
+		<ul class="nav flex-column">
+  <li class="nav-item">
+    <a class="btn btn-outline-primary" style="font_size:14px;" aria-current="page" href="./index">PHÂN LOẠI VĂN BẢN URL TIẾNG VIỆT</a>
+  </li>
+  <br>
+  <li class="nav-item">
+    <a class="btn btn-outline-secondary" style="font_size:14px;" href="./portal">PHÂN LOẠI BẰNG TIÊU ĐỀ</a>
+  </li>
+  <br>
+  <li class="nav-item">
+    <a class="btn btn-outline-success" style="font_size:14px;" href="./index_english">PHÂN LOẠI VĂN BẢN URL TIẾNG ANH</a>
+  </li>
+  <br>
+  <li class="nav-item">
+    <a class="btn btn-outline-info" style="font_size:14px;" href="./index_vietnamese">PHÂN LOẠI VĂN BẢN TIẾNG VIỆT</a>
+  </li>
+</ul>
+</div>
+    </div>
+    <div class="col-sm-4 col-lg-6">
+		<div class="">
+			<div class="caption">
+	<div class="col-sm-4 col-lg-12">&nbsp;
+	  <div class="thumbnail">
+	  <h3>DEMO PHÂN LOẠI VĂN BẢN TIN TỨC</h3>
+    <div class="container">
+        <form role=" form" method='POST' action='/crawl'>
+            <div class="form-group">
+                <input placeholder="Nhập url:" type="text" name="input_url" class="form-control h5" id="input_url" style="max-width: 450px;"
+                    title="Nhập vào ô URL bài báo thuộc 1 trong 5 tên miền đã được hỗ trợ sau: baomoi.com, vnexpress.net, thanhnien.vn, dantri.com.vn, vietnamnet.vn" autofocus required>
+					<br>
+          <div>
+                <textarea class="form-control h5" style="max-width: 450px; font_size: 14px;" id="article_content" rows="15" readonly>{{article}}</textarea>
+            </div>
+				</div>
+					<button type="submit" class="btn btn-primary btn-lg">Phân loại văn bản</button>
+            <br />
+        </form>
+    </div>
+
+	
+	  </div>	  
+	  <br>
+     </div>
+	 
+			</div>
+		</div>
+    </div>
+    <div class="col-sm-4 col-lg-3">
+		<div class="thumbnail">
+		<div class="caption">
+				<h3>Được sử dụng trên trang</h3>
+				</div>
+			<a href="#"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v471/v2_2019/pc/graphics/logo.svg"></a>
+			<a href="#"><img style="height:50px; width: 120px" src="https://vnn-res.vgcloud.vn/ResV9/images/logo-vnn-hungcuong-d2.svg"></a>
+			<a href="#"><img src="https://brandcom.vn/wp-content/uploads/2015/05/baomoi-logo.jpg"></a>
+			<a href="#"><img style="height:50px; width: 100px" src="https://cdnweb.dantri.com.vn/bundle/static/assets/lg_dantri_dktop1.svg?v=1109105633"></a>
+		</div>
+		 <div class="thumbnail">
+	  <img style="height:20px; width:20px;" src="https://diaoc5sao.vn/wp-content/uploads/2016/04/checked-checkbox-xxl.png"/> 
+			<h4 style="color: blue;">Kết quả phân loại</h4>
+            <p style="color:green;">
+                {{predict}}
+            </p>
+				 			 
+	  </div>
+	   <div class="thumbnail">
+	   <a class="btn btn-outline-primary btn-lg" aria-current="page" href="./crawl">CRAWLER</a>
+	   <p style="color: white;"></p>
+        <a href="/download_crawl" target="blank"><button class='btn btn-primary btn-lg'>Download file</button></a>
+	  </div>
+	  </div>
+   	  
+</div>
+    
+  </div>
+</div><hr>
+<footer class="container-fluid bg-light text-center text-lg-start">
+	<div class="row">
+		<div class="col-sm-5"> <br>
+			<h3>Dữ liệu được sử dụng: </h3>
+			<h5>UIT-ViON Dataset: An Open-domain, Large-scale and High-quality Dataset of Online News in Vietnamese</h5>
+			<p>https://github.com/khanhtran0412/UIT-ViON-Dataset</p>
+			<h5>BBC News</h5>
+			<p>https://www.kaggle.com/yufengdev/bbc-text-categorization/data</p>
+		<div class="col-sm-5">
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+
